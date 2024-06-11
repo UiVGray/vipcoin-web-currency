@@ -1,9 +1,13 @@
 const swiper = new Swiper(".packages__slider", {
     slidesPerView: 4,
     loop: true,
+    autoplay: {
+        delay: 2000,
+        disableOnInteraction: false
+    },
     navigation: {
-        prevEl: ".packages__slider__prev-button",
-        nextEl: ".packages__slider__next-button"
+        prevEl: ".packages__prev-button",
+        nextEl: ".packages__next-button"
     },
     pagination: {
         el: ".swiper-pagination",

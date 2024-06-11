@@ -2,7 +2,7 @@
   --diamond-color-scheme: linear-gradient(176.47deg, #f33 -36.48%, #f330 95.83%);
   --background-gradient-color-scheme: radial-gradient(50% 50% at 50% 50%, #ff333380 0%, #f330 100%);
   --item-shadow-color-scheme: linear-gradient(130.66deg, #ffffff4d -19.06%, #f330 31.37%), #000;
-  --roadmap-item-border-color-scheme: linear-gradient(145deg, #3b3a3a 40%, #2f2e2e00 75%);
+  --roadmap-item-border-color-scheme: linear-gradient(145deg, #3b3a3a 40%, #fff0 75%);
   --entertainment-wrapper-gradient-color-scheme: linear-gradient(90deg, #0000 0%, #fff 100%);
 }
 
@@ -213,7 +213,7 @@ h2 {
 
 .overview__button:hover {
   transform-origin: center;
-  background-color: #ff4848;
+  background-color: #ff6767;
 }
 
 .overview__button:active {
@@ -537,7 +537,7 @@ h2 {
   height: 206px;
   transition: all 1s;
   display: flex;
-  box-shadow: -5px -5px 20px #0000004d, inset 30px 30px 36px #15151580;
+  box-shadow: -5px -5px 20px #ffffff4d, inset 30px 30px 36px #15151580;
 }
 
 .staking__item:hover {
@@ -592,17 +592,20 @@ h2 {
   text-align: center;
   background-color: #f33;
   border-radius: 50%;
-  width: 60px;
+  width: 100%;
+  max-width: 60px;
   height: 60px;
   transition: all 1s;
 }
 
 .packages__prev-button:hover, .packages__next-button:hover {
-  background-color: #ff4848;
+  background: #ff6767;
 }
 
 .packages__prev-button:active, .packages__next-button:active {
-  transform: scale(.9);
+  transform-origin: center;
+  background: #ff333380;
+  transform: scale(.9)translateZ(0);
 }
 
 .packages__prev-button svg {
@@ -614,14 +617,14 @@ h2 {
 }
 
 .packages__slider {
-  margin: 0 11.5px;
+  margin: 0 11.5px !important;
 }
 
 .packages__slider__wrapper {
   justify-content: space-between;
   width: 100%;
   max-width: 1150px;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
   display: flex;
 }
 
@@ -714,8 +717,13 @@ h2 {
   position: absolute;
 }
 
-.swiper-pagination {
-  padding-top: 30px !important;
+.swiper-pagination-bullet {
+  width: 1rem !important;
+  height: 1rem !important;
+}
+
+.swiper-pagination-bullet-active {
+  background: #f33 !important;
 }
 
 .referral {
@@ -780,7 +788,7 @@ h2 {
 }
 
 .referral__item__wrapper {
-  column-gap: 30px;
+  column-gap: 50px;
   display: flex;
 }
 
@@ -788,12 +796,10 @@ h2 {
   background: var(--item-shadow-color-scheme);
   border-radius: 8px;
   width: 100%;
-  max-width: 554px;
-  height: 100%;
   max-height: 659px;
   padding: 30px 0 30px 30px;
   transition: all 1s;
-  box-shadow: -5px -5px 20px #0000004d, inset 30px 30px 36px #15151580;
+  box-shadow: -5px -5px 20px #ffffff4d, inset 30px 30px 36px #15151580;
 }
 
 .referral__item:hover {
@@ -854,7 +860,7 @@ h2 {
   margin-bottom: 49px;
 }
 
-.referral.card-1 {
+.referral .card-1 {
   gap: 15%;
   margin-bottom: 50px;
   display: flex;
@@ -891,10 +897,13 @@ h2 {
 }
 
 .promo__heading:after, .promo__heading:before {
+  content: "";
   z-index: 2;
   background: #f33;
-  width: 150px;
-  height: 150px;
+  width: 100%;
+  max-width: 150px;
+  height: 100%;
+  max-height: 150px;
   position: absolute;
   top: 40%;
   transform: rotate(-45deg);
@@ -1005,7 +1014,7 @@ h2 {
   height: 60px;
   position: absolute;
   top: -1px;
-  left: 38px;
+  left: 35px;
   transform: rotate(-45deg)translate(-48%, -68%);
 }
 
@@ -1333,7 +1342,7 @@ h2 {
 
 .enroll__button:hover {
   transform-origin: center;
-  background-color: #ff4848;
+  background-color: #ff6767;
 }
 
 .enroll__button:active {
