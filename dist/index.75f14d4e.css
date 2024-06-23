@@ -45,6 +45,7 @@ h2 {
 
 .header {
   background: #000;
+  margin: -1px;
   padding: 20px 0 100px;
 }
 
@@ -149,9 +150,13 @@ h2 {
   display: flex;
 }
 
+.nav__menu a {
+  color: #000;
+}
+
 @media only screen and (width <= 992px) {
   .nav__menu {
-    z-index: 3;
+    z-index: 4;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -180,6 +185,8 @@ h2 {
 
 @media only screen and (width <= 992px) {
   .nav__menu-button-container {
+    max-width: 50px;
+    max-height: 50px;
     display: flex;
     position: relative;
     left: -800%;
@@ -851,7 +858,7 @@ h2 {
 
 .goals__article:after {
   content: "";
-  z-index: 1;
+  z-index: -1;
   border: 1px solid #f33;
   border-radius: 50%;
   width: 665px;
@@ -1578,7 +1585,7 @@ h2 {
   transform: scale(1.1);
 }
 
-.packages .packages__slider__package .package__price {
+.packages__price {
   color: #f33;
   margin-top: 20.15px;
   font-size: 50px;
@@ -1587,7 +1594,7 @@ h2 {
 }
 
 @media only screen and (width <= 1300px) {
-  .packages .packages__slider__package .package__price {
+  .packages__price {
     margin-top: 18px;
     font-size: 42px;
     line-height: 100%;
@@ -1595,26 +1602,26 @@ h2 {
 }
 
 @media only screen and (width <= 1100px) {
-  .packages .packages__slider__package .package__price {
+  .packages__price {
     margin-top: 15px;
     font-size: 38px;
   }
 }
 
 @media only screen and (width <= 992px) {
-  .packages .packages__slider__package .package__price {
+  .packages__price {
     margin-top: 10px;
     font-size: 28px;
   }
 }
 
 @media only screen and (width <= 650px) {
-  .packages .packages__slider__package .package__price {
+  .packages__price {
     font-size: 24px;
   }
 }
 
-.packages .packages__slider__package .package__percentage, .packages .packages__slider__package .package__term {
+.packages__percentage, .packages__term {
   margin-top: 10px;
   font-size: 24px;
   font-weight: 400;
@@ -1622,56 +1629,56 @@ h2 {
 }
 
 @media only screen and (width <= 1300px) {
-  .packages .packages__slider__package .package__percentage, .packages .packages__slider__package .package__term {
+  .packages__percentage, .packages__term {
     font-size: 20px;
     line-height: 100%;
   }
 }
 
 @media only screen and (width <= 1100px) {
-  .packages .packages__slider__package .package__percentage, .packages .packages__slider__package .package__term {
+  .packages__percentage, .packages__term {
     font-size: 18px;
   }
 }
 
 @media only screen and (width <= 992px) {
-  .packages .packages__slider__package .package__percentage, .packages .packages__slider__package .package__term {
+  .packages__percentage, .packages__term {
     font-size: 14px;
   }
 }
 
 @media only screen and (width <= 650px) {
-  .packages .packages__slider__package .package__percentage, .packages .packages__slider__package .package__term {
+  .packages__percentage, .packages__term {
     margin-top: 5px;
   }
 }
 
-.packages .packages__slider__package .package__percentage span, .packages .packages__slider__package .package__term span {
+.packages__percentage span, .packages__term span {
   font-size: 24px;
   font-weight: 600;
   line-height: 130%;
 }
 
 @media only screen and (width <= 1300px) {
-  .packages .packages__slider__package .package__percentage span, .packages .packages__slider__package .package__term span {
+  .packages__percentage span, .packages__term span {
     font-size: 20px;
     line-height: 100%;
   }
 }
 
 @media only screen and (width <= 1100px) {
-  .packages .packages__slider__package .package__percentage span, .packages .packages__slider__package .package__term span {
+  .packages__percentage span, .packages__term span {
     font-size: 18px;
   }
 }
 
 @media only screen and (width <= 992px) {
-  .packages .packages__slider__package .package__percentage span, .packages .packages__slider__package .package__term span {
+  .packages__percentage span, .packages__term span {
     font-size: 14px;
   }
 }
 
-.packages .packages__slider__package .package__text {
+.packages__text {
   margin-top: 50px;
   font-size: 22px;
   font-weight: 400;
@@ -1679,7 +1686,7 @@ h2 {
 }
 
 @media only screen and (width <= 1300px) {
-  .packages .packages__slider__package .package__text {
+  .packages__text {
     margin-top: 30px;
     font-size: 18px;
     line-height: 100%;
@@ -1687,25 +1694,25 @@ h2 {
 }
 
 @media only screen and (width <= 1100px) {
-  .packages .packages__slider__package .package__text {
+  .packages__text {
     margin-top: 20px;
     font-size: 16px;
   }
 }
 
 @media only screen and (width <= 992px) {
-  .packages .packages__slider__package .package__text {
+  .packages__text {
     font-size: 14px;
   }
 }
 
 @media only screen and (width <= 650px) {
-  .packages .packages__slider__package .package__text {
+  .packages__text {
     margin-top: 10px;
   }
 }
 
-.packages .packages__slider__package .package__diamond {
+.packages__diamond {
   justify-content: center;
   align-items: center;
   width: 84.85px;
@@ -1718,13 +1725,13 @@ h2 {
 }
 
 @media only screen and (width <= 1300px) {
-  .packages .packages__slider__package .package__diamond {
+  .packages__diamond {
     left: 28px;
   }
 }
 
 @media only screen and (width <= 1100px) {
-  .packages .packages__slider__package .package__diamond {
+  .packages__diamond {
     width: 74.85px;
     height: 74.85px;
     top: -77px;
@@ -1733,7 +1740,7 @@ h2 {
 }
 
 @media only screen and (width <= 992px) {
-  .packages .packages__slider__package .package__diamond {
+  .packages__diamond {
     width: 54.85px;
     height: 54.85px;
     top: -57px;
@@ -1742,13 +1749,13 @@ h2 {
 }
 
 @media only screen and (width <= 768px) {
-  .packages .packages__slider__package .package__diamond {
+  .packages__diamond {
     left: 5px;
   }
 }
 
 @media only screen and (width <= 650px) {
-  .packages .packages__slider__package .package__diamond {
+  .packages__diamond {
     width: 44.85px;
     height: 44.85px;
     top: -45px;
@@ -1756,7 +1763,7 @@ h2 {
   }
 }
 
-.packages .packages__slider__package .package__diamond:before {
+.packages__diamond:before {
   content: "";
   background: #f33;
   width: 69.76%;
@@ -1767,7 +1774,7 @@ h2 {
   transform: rotate(45deg);
 }
 
-.packages .packages__slider__package .package__diamond:after {
+.packages__diamond:after {
   content: "VIP";
   text-align: center;
   color: #fff;
@@ -1778,13 +1785,13 @@ h2 {
 }
 
 @media only screen and (width <= 992px) {
-  .packages .packages__slider__package .package__diamond:after {
+  .packages__diamond:after {
     font-size: 20px;
   }
 }
 
 @media only screen and (width <= 650px) {
-  .packages .packages__slider__package .package__diamond:after {
+  .packages__diamond:after {
     font-size: 18px;
   }
 }
@@ -2657,6 +2664,7 @@ h2 {
   .promo .small:after {
     width: 50px;
     height: 50px;
+    left: 26px;
   }
 }
 
@@ -2914,6 +2922,7 @@ h2 {
 
 .roadmap {
   background: #000;
+  margin: -1px;
   padding-top: 100px;
 }
 
@@ -3085,6 +3094,7 @@ h2 {
 
 .enroll {
   background: #000;
+  margin: -1px;
 }
 
 .enroll a {

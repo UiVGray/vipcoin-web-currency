@@ -36,6 +36,7 @@ h2 {
 }
   
 .header {
+    margin: -1px;
     padding: 20px 0 100px 0;
     background: $black;
     @media only screen and (max-width: 768px) {
@@ -113,6 +114,10 @@ h2 {
         list-style-type: none;
         margin: 0;
         padding: 0;
+
+        a {
+            color: $black;
+        }
         @media only screen and (max-width: 992px) {
             position: absolute;
             top: 0;
@@ -122,7 +127,7 @@ h2 {
             width: 100%;
             justify-content: center;
             align-items: center;
-            z-index: 3;
+            z-index: 4;
         }
     }
 
@@ -141,6 +146,8 @@ h2 {
         align-items: center;
         @media only screen and (max-width: 992px) {
             display: flex;
+            max-width: 50px;
+            max-height: 50px;
             position: relative;
             left: -800%;
         }
@@ -705,7 +712,7 @@ h2 {
             border: 1px solid $red;
             border-radius: 50% 50%;
             transform: rotate(16deg) translate(-10px, 90px);
-            z-index: 1;
+            z-index: -1;
             @media only screen and (max-width: 1200px) {
                 width: 500px;
                 height: 190px;
@@ -1263,39 +1270,59 @@ h2 {
         }
     }
 
-    .packages__slider__package {
-        .package__price {
-            font-weight: 600;
-            font-size: 50px;
-            line-height: 130%;
-            color: $red;
-            margin-top: 20.15px;
-            @media only screen and (max-width: 1300px) {
-                font-size: 42px;
-                line-height: 100%;
-                margin-top: 18px;
-            }
-            
-            @media only screen and (max-width: 1100px) {
-                font-size: 38px;
-                margin-top: 15px;
-            }
-    
-            @media only screen and (max-width: 992px) {
-                font-size: 28px;
-                margin-top: 10px;
-            }
-
-            @media only screen and (max-width: 650px) {
-                font-size: 24px;
-            }
+    &__price {
+        font-weight: 600;
+        font-size: 50px;
+        line-height: 130%;
+        color: $red;
+        margin-top: 20.15px;
+        @media only screen and (max-width: 1300px) {
+            font-size: 42px;
+            line-height: 100%;
+            margin-top: 18px;
+        }
+        
+        @media only screen and (max-width: 1100px) {
+            font-size: 38px;
+            margin-top: 15px;
         }
 
-        .package__percentage, .package__term {
-            font-weight: 400;
+        @media only screen and (max-width: 992px) {
+            font-size: 28px;
+            margin-top: 10px;
+        }
+
+        @media only screen and (max-width: 650px) {
+            font-size: 24px;
+        }
+    }
+
+    &__percentage, &__term {
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 130%;
+        margin-top: 10px;
+        @media only screen and (max-width: 1300px) {
+            font-size: 20px;
+            line-height: 100%;
+        }
+        
+        @media only screen and (max-width: 1100px) {
+            font-size: 18px;
+        }
+
+        @media only screen and (max-width: 992px) {
+            font-size: 14px;
+        }
+
+        @media only screen and (max-width: 650px) {
+            margin-top: 5px;
+        }
+
+        span {
+            font-weight: 600;
             font-size: 24px;
             line-height: 130%;
-            margin-top: 10px;
             @media only screen and (max-width: 1300px) {
                 font-size: 20px;
                 line-height: 100%;
@@ -1308,120 +1335,98 @@ h2 {
             @media only screen and (max-width: 992px) {
                 font-size: 14px;
             }
-    
-            @media only screen and (max-width: 650px) {
-                margin-top: 5px;
-            }
-
-            span {
-                font-weight: 600;
-                font-size: 24px;
-                line-height: 130%;
-                @media only screen and (max-width: 1300px) {
-                    font-size: 20px;
-                    line-height: 100%;
-                }
-                
-                @media only screen and (max-width: 1100px) {
-                    font-size: 18px;
-                }
-        
-                @media only screen and (max-width: 992px) {
-                    font-size: 14px;
-                }
-            }
         }
+    }
 
-        .package__text {
-            font-weight: 400;
-            font-size: 22px;
-            line-height: 130%;
-            margin-top: 50px;
-            @media only screen and (max-width: 1300px) {
-                font-size: 18px;
-                line-height: 100%;
-                margin-top: 30px;
-            }
-            
-            @media only screen and (max-width: 1100px) {
-                font-size: 16px;
-                margin-top: 20px;
-            }
-    
-            @media only screen and (max-width: 992px) {
-                font-size: 14px;
-            }
-    
-            @media only screen and (max-width: 650px) {
-                margin-top: 10px;
-            }
+    &__text {
+        font-weight: 400;
+        font-size: 22px;
+        line-height: 130%;
+        margin-top: 50px;
+        @media only screen and (max-width: 1300px) {
+            font-size: 18px;
+            line-height: 100%;
+            margin-top: 30px;
         }
         
-        .package__diamond {
-            width: 84.85px;
-            height: 84.85px;
-            display: flex;
-            align-items: center;
-            justify-content: center; 
+        @media only screen and (max-width: 1100px) {
+            font-size: 16px;
+            margin-top: 20px;
+        }
+
+        @media only screen and (max-width: 992px) {
+            font-size: 14px;
+        }
+
+        @media only screen and (max-width: 650px) {
+            margin-top: 10px;
+        }
+    }
+
+    &__diamond {
+        width: 84.85px;
+        height: 84.85px;
+        display: flex;
+        align-items: center;
+        justify-content: center; 
+        position: absolute;
+        top: -86.84px;
+        left: 42.42px;
+        transform: translate(50%, 51%);
+        @media only screen and (max-width: 1300px) {
+            left: 28px;
+        }
+
+        @media only screen and (max-width: 1100px) {
+            width: 74.85px;
+            height: 74.85px;
+            top: -77px;
+            left: 25px;
+        }
+
+        @media only screen and (max-width: 992px) {
+            width: 54.85px;
+            height: 54.85px;
+            top: -57px;
+            left: 16px;
+        }
+
+        @media only screen and (max-width: 768px) {
+            left: 5px;
+        }
+
+        @media only screen and (max-width: 650px) {
+            width: 44.85px;
+            height: 44.85px;
+            top: -45px;
+            left: 5px;
+        }
+
+        &::before {
+            content: "";
             position: absolute;
-            top: -86.84px;
-            left: 42.42px;
-            transform: translate(50%, 51%);
-            @media only screen and (max-width: 1300px) {
-                left: 28px;
-            }
-
-            @media only screen and (max-width: 1100px) {
-                width: 74.85px;
-                height: 74.85px;
-                top: -77px;
-                left: 25px;
-            }
-
+            top: 15%;
+            left: 15%; 
+            width: 69.76%;
+            height: 69.76%;
+            background: $red;
+            transform: rotate(45deg);
+        }
+    
+        &::after {
+            content: "VIP";
+            position: absolute;
+            width: 100%;
+            text-align: center;
+            color: $white;
+            font-size: 24px;
+            font-weight: 400;
             @media only screen and (max-width: 992px) {
-                width: 54.85px;
-                height: 54.85px;
-                top: -57px;
-                left: 16px;
-            }
-
-            @media only screen and (max-width: 768px) {
-                left: 5px;
+                font-size: 20px;
             }
 
             @media only screen and (max-width: 650px) {
-                width: 44.85px;
-                height: 44.85px;
-                top: -45px;
-                left: 5px;
-            }
-
-            &::before {
-                content: "";
-                position: absolute;
-                top: 15%;
-                left: 15%; 
-                width: 69.76%;
-                height: 69.76%;
-                background: $red;
-                transform: rotate(45deg);
-            }
-        
-            &::after {
-                content: "VIP";
-                position: absolute;
-                width: 100%;
-                text-align: center;
-                color: $white;
-                font-size: 24px;
-                font-weight: 400;
-                @media only screen and (max-width: 992px) {
-                    font-size: 20px;
-                }
-
-                @media only screen and (max-width: 650px) {
-                    font-size: 18px;
-                }
+                font-size: 18px;
             }
         }
     }
@@ -1786,7 +1791,7 @@ h2 {
     }
 }
 
- .promo {
+.promo {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -2094,6 +2099,7 @@ h2 {
             @media only screen and (max-width: 1200px) {
                 width: 50px;
                 height: 50px;
+                left: 26px;
             }
 
             @media only screen and (max-width: 992px) {
@@ -2311,6 +2317,7 @@ h2 {
   
 .roadmap {
     background: $black;
+    margin: -1px;
     padding-top: 100px;
     @media only screen and (max-width: 992px) {
         padding-top: 50px;
@@ -2452,6 +2459,7 @@ h2 {
 
 .enroll {
     background: $black;
+    margin: -1px;
     a {
         font-size: 20px;
         line-height: 36px;
